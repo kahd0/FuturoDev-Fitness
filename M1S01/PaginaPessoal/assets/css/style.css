@@ -1,49 +1,102 @@
-*{
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    list-style: none;
-    text-decoration: none;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
-header{
-    position: fixed;
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #c0392b; /* Vermelho */
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.projects-carousel {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    overflow-x: auto;
+}
+
+.project-card {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    padding: 0 20px; /* Adicionando espaçamento interno */
+}
+
+.project {
+    flex: 0 0 auto;
+    padding: 20px;
+    text-align: center;
+    scroll-snap-align: start;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 10px; /* Reduzindo a margem entre os projetos */
+    margin-left: 10px;  /* Reduzindo a margem entre os projetos */
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease; /* Adicionado filtro para ajustar a opacidade */
+}
+
+.project h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.project p {
+    color: #555;
+}
+
+.project.selected {
+    transform: scale(1.1); /* Aumenta o tamanho do card selecionado */
+    background-color: #3498db; /* Azul */
+    color: #fff; /* Cor do texto branco */
+    filter: grayscale(0); /* Remove o filtro de escala de cinza do projeto selecionado */
+}
+
+.project:not(.selected) {
+    opacity: 0.5; /* Reduz a opacidade dos projetos não selecionados */
+    filter: grayscale(1); /* Torna os projetos não selecionados em escala de cinza */
+}
+
+button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
     right: 0;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:33px 9%;
-    background: transparent;
 }
 
-body{
-    background: red;
-}
-
-.logo{
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
-
-}
-
-.navelist{
-    display: flex;
-}
-
-.navelist a{
-    color: white;
-    margin-left: 60px;
-    font-size: 15px;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: all .55s ease;
-}
-
-.navelist a :hover{
-    border-bottom: 2px solid white;
+footer {
+    background-color: #c0392b; /* Vermelho */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }

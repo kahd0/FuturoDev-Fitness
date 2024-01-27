@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ricardo Vieira - Página Pessoal</title>
-
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet"  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
     <header>
-        <a href="#" class="logo">Ricardo Vieira</a>
-
-        <ul class="navelist">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Clans</a></li>
-            <li><a href="#">Town hall</a></li>
-            <li><a href="#">Toops</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="container">
+            <h1>Meu Portfólio</h1>
+        </div>
     </header>
+    <section class="projects-carousel">
+        <div class="container">
+            <div class="project-card">
+                <div class="project">
+                    <h2>Projeto 1</h2>
+                    <p>Descrição breve do Projeto 1.</p>
+                    <img src="assets/img/projeto1.png" alt="Projeto 1">
+                </div>
+                <div class="project">
+                    <h2>Projeto 2</h2>
+                    <p>Descrição breve do Projeto 2.</p>
+                    <img src="assets/img/projeto2.png" alt="Projeto 2">
+                </div>
+                <div class="project">
+                    <h2>Projeto 3</h2>
+                    <p>Descrição breve do Projeto 3.</p>
+                    <img src="assets/img/projeto3.png" alt="Projeto 3">
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Meu Portfólio</p>
+        </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
-
 </body>
 </html>
