@@ -1,102 +1,135 @@
+/* Define o estilo básico para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #018031; /* Define a cor de fundo como verde (#018031) */
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
 }
 
+/* Define estilos para o contêiner principal */
 .container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 1200px;
+    width: 90%; /* Define a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 0 20px; /* Adiciona um espaçamento interno ao contêiner */
+    max-width: 1200px; /* Define a largura máxima do contêiner */
 }
 
+/* Estilos para o cabeçalho */
 header {
-    background-color: #c0392b; /* Vermelho */
-    color: #fff;
-    padding: 20px 0;
+    background-color: #666666; /* Define a cor de fundo do cabeçalho como cinza escuro */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 20px 0; /* Adiciona preenchimento ao cabeçalho */
 }
 
 header h1 {
-    margin: 0;
-    text-align: center;
+    margin: 0; /* Remove as margens do título */
+    text-align: center; /* Centraliza o título */
 }
 
+/* Estilos para a seção do carrossel de projetos */
 .projects-carousel {
-    background-color: #f5f5f5;
-    padding: 20px 0;
-    overflow-x: auto;
+    background-color: #018031; /* Define a cor de fundo como verde (#018031) */
+    padding: 20px 0; /* Adiciona preenchimento à seção */
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    overflow-y: auto; /* Adiciona a barra de rolagem vertical se necessário */
 }
 
+/* Estilos para o contêiner dos projetos */
 .project-card {
-    display: flex;
-    scroll-snap-type: x mandatory;
-    padding: 0 20px; /* Adicionando espaçamento interno */
+    display: flex; /* Usa um layout de exibição flexível */
+    flex-wrap: nowrap; /* Evita que os projetos quebrem a linha */
+    justify-content: center; /* Centraliza os projetos horizontalmente */
+    scroll-snap-type: x mandatory; /* Adiciona rolagem de carrossel horizontal */
+    padding: 0 20px; /* Adiciona espaçamento interno ao contêiner dos projetos */
+    max-height: 100vh; /* Define a altura máxima para a altura da tela */
 }
 
+/* Estilos para cada projeto individual */
 .project {
-    flex: 0 0 auto;
-    padding: 20px;
-    text-align: center;
-    scroll-snap-align: start;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-right: 10px; /* Reduzindo a margem entre os projetos */
-    margin-left: 10px;  /* Reduzindo a margem entre os projetos */
-    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease; /* Adicionado filtro para ajustar a opacidade */
+    flex: 0 0 auto; /* Permite que os projetos tenham um tamanho flexível */
+    padding: 20px; /* Adiciona espaçamento interno aos projetos */
+    text-align: center; /* Centraliza o conteúdo dentro dos projetos */
+    scroll-snap-align: start; /* Define o alinhamento dos pontos de rolagem */
+    background-color: #fff; /* Define a cor de fundo dos projetos como branco */
+    border-radius: 8px; /* Adiciona bordas arredondadas aos projetos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra aos projetos */
+    margin-right: 10px; /* Define a margem direita dos projetos */
+    margin-left: 10px; /* Define a margem esquerda dos projetos */
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease; /* Adiciona transições suaves */
+    max-width: calc(33.33% - 20px); /* Garante que apenas 3 projetos sejam exibidos por vez */
+    width: 30%; /* Ajusta o tamanho dos projetos para 30% da largura da viewport */
 }
 
+/* Estilos para as imagens dentro dos projetos */
+.project img {
+    max-width: 100%; /* Define a largura máxima da imagem como 100% */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+}
+
+/* Estilos para os títulos dos projetos */
 .project h2 {
-    margin-top: 0;
-    font-size: 1.5em;
+    margin-top: 0; /* Remove a margem superior dos títulos */
+    font-size: 1.5em; /* Define o tamanho da fonte dos títulos */
 }
 
+/* Estilos para os parágrafos dentro dos projetos */
 .project p {
-    color: #555;
+    color: #8c8c8c; /* Define a cor do texto como cinza médio */
 }
 
+/* Estilos para projetos selecionados */
 .project.selected {
-    transform: scale(1.1); /* Aumenta o tamanho do card selecionado */
-    background-color: #3498db; /* Azul */
-    color: #fff; /* Cor do texto branco */
-    filter: grayscale(0); /* Remove o filtro de escala de cinza do projeto selecionado */
+    transform: scale(1.1); /* Aumenta o tamanho do projeto selecionado */
+    background-color: #ffffff; /* Define a cor de fundo do projeto selecionado como branco */
+    color: #018031; /* Define a cor do texto como verde (#018031) */
+    filter: grayscale(0); /* Remove o filtro de escala de cinza */
 }
 
+/* Estilos para projetos não selecionados */
 .project:not(.selected) {
-    opacity: 0.5; /* Reduz a opacidade dos projetos não selecionados */
-    filter: grayscale(1); /* Torna os projetos não selecionados em escala de cinza */
+    opacity: 0.5; /* Define a opacidade dos projetos não selecionados */
+    filter: grayscale(1); /* Aplica um filtro de escala de cinza aos projetos não selecionados */
 }
 
+/* Estilos para botões */
 button {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    color: #333;
-    font-size: 18px;
-    padding: 10px;
-    transition: background-color 0.3s ease;
+    cursor: pointer; /* Define o cursor como ponteiro */
+    position: absolute; /* Define a posição absoluta */
+    top: 50%; /* Define a posição vertical no centro */
+    transform: translateY(-50%); /* Move o botão para cima 50% da sua própria altura */
+    background-color: rgba(255, 255, 255, 0.5); /* Define a cor de fundo com transparência */
+    border: none; /* Remove a borda */
+    color: #333; /* Define a cor do texto como preto */
+    font-size: 18px; /* Define o tamanho da fonte */
+    padding: 10px; /* Adiciona preenchimento ao botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Altera a cor de fundo ao passar o mouse */
 }
 
+/* Estilos para projetos quando o mouse está sobre eles */
+.project:hover {
+    background-color: #c8d3cd; /* Altera a cor de fundo ao passar o mouse */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Estilos para o botão "Anterior" */
 .prev {
-    left: 0;
+    left: 0; /* Define a posição do botão "Anterior" à esquerda */
 }
 
+/* Estilos para o botão "Próximo" */
 .next {
-    right: 0;
+    right: 0; /* Define a posição do botão "Próximo" à direita */
 }
 
+/* Estilos para o rodapé */
 footer {
-    background-color: #c0392b; /* Vermelho */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #666666; /* Define a cor de fundo como cinza escuro */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 20px 0; /* Adiciona preenchimento ao rodapé */
+    text-align: center; /* Centraliza o texto */
 }
